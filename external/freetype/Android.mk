@@ -13,6 +13,7 @@ LOCAL_CPPFLAGS += -std=c++11
 # when loading complex pages in the browser
 #
 LOCAL_ARM_MODE := arm
+LOCAL_NDK_STL_VARIANT := none
 
 LOCAL_SRC_FILES:= \
     src/base/ftbbox.c \
@@ -36,7 +37,10 @@ LOCAL_SRC_FILES:= \
     src/truetype/truetype.c \
     src/cff/cff.c \
     src/psnames/psnames.c \
-    src/pshinter/pshinter.c
+    src/pshinter/pshinter.c \
+    src/cid/type1cid.c \
+    src/type1/type1.c \
+    src/psaux/psaux.c
 
 LOCAL_C_INCLUDES += \
     $(LOCAL_PATH)/include \
